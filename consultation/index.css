@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+box-sizing: border-box;
+}
+
+p{
+line-height: 1.4;
+display: block;
+position: relative;
+bottom: 6rem;
+}
+body, select, button {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    color: #003F2E;
+}
+#qu{
+    color:#fff
+}
+button {
+    margin-bottom: 10px;
+    background-color: #003F2E;
+    color: #E6E6DE;
+    border-radius: 5px;
+}
+body {
+    background-color: #003F2E;
+}
+#inputsContainer, #resultsContainer, #infoContainer {
+    background-color: #E6E6DE;
+    color: #003F2E;
+    border-radius: 5px;
+    display: table;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 10px;
+}
+#resultsContainer, #infoContainer {
+    text-align: center;
+    line-height: 150%;
+    padding: 5px 0px 5px 0px;
+
+    visibility: collapse;
+}
+label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+img{
+    display:none;
+}
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    transition: margin 0.5s ease-out;
+    position:relative;
+}
+
+.screen.up {
+    margin-top: -100vh;
+}
+
+.insects-list {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+list-style-type: none;
+padding: 0;
+}
+
+.insects-list li {
+margin: 10px;
+}
+
+.choose-insect-btn {
+background-color: transparent;
+border: 2px solid #fff;
+color: #fff;
+cursor: pointer;
+font-family: inherit;
+width: 150px;
+height: 150px;
+}
+.kid {
+background-image: url("kid.jpg");
+background-size:cover;
+background-position: center;
+}
+.adult{
+background-image: url("adult.jpg");
+background-size:cover;
+background-position: center;
+}
+.elderly{
+background-image: url("elderly.jpg");
+background-size:cover;
+background-position: center;
+}
+/* .choose-insect-btn:hover {
+color: #516dff;
+} */
+button.choose-insect-btn{
+    position:relative;
+}
+.choose-insect-btn:active .subcons{
+color:#fff;
+display:block;
+
+} 
+.choose-insect-btn:hover {
+color: #516dff;
+text-align: center;
+
+    }
+.subcons{
+    display:none; 
+    width:120px;
+    height:60px;
+    position:absolute;
+    top:10rem;
+    border:#fff;
+    color:#fff;
+    text-align: center;
+}
+
+/* .choose-insect-btn:hover .subcons.one {
+    display:inline-block;
+    color:#fff;
+    background-color: black;
+    } */
+
+/* .choose-insect-btn:active {
+background-color: rgba(255, 255, 255, 0.7);
+} */
+
+.choose-insect-btn img {
+width: 100px;
+height: 100px;
+object-fit: contain;
+}
+.insect {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.insect.caught {
+transform: translate(-50%, -50%) scale(0);
+}
+
+.insect img {
+width: 100px;
+height: 100px;
+}
